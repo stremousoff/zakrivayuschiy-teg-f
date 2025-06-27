@@ -193,8 +193,7 @@
 	line-height: 90%;
 }
 
-dialog {
-	position: relative;
+.dialog {
 	display: grid;
 	grid-template-columns: auto auto;
 	justify-content: center;
@@ -206,15 +205,15 @@ dialog {
 	width: 341px;
 }
 
-dialog:not([open]) {
+.dialog:not([open]) {
 	display: none;
 }
 
-dialog::backdrop {
+.dialog::backdrop {
 	background-color: rgb(0 0 0 / 0.75);
 }
 
-dialog .floppy-button__icon {
+.dialog .floppy-button__icon {
 	width: 39px;
 	height: 39px;
 }
