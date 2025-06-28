@@ -42,7 +42,7 @@
 							<p>Место для ваших воспоминаний о начале обучения.</p>
 						</div>
 						<div class="card__button-wrapper">
-							<button class="button-reset card__icon-button">
+							<button class="card__icon-button">
 								<svg
 									class="like-icon"
 									viewBox="0 0 39 36"
@@ -74,7 +74,7 @@
 									/>
 								</svg>
 							</button>
-							<button class="button-reset card__like-button">
+							<button class="button card__like-button">
 								<span class="button__text">Like</span>
 							</button>
 						</div>
@@ -82,7 +82,7 @@
 				</li>
 			</ul>
 			<button
-				class="floppy-button"
+				class="button floppy-button"
 				type="button"
 				onclick="window['dialog-id'].showModal()"
 				aria-controls="dialog-id"
@@ -90,21 +90,20 @@
 				<svg class="floppy-button__icon">
 					<use xlink:href="./images/floppy.svg#floppy"></use>
 				</svg>
-				<span class="floppy-button__text">Сохранить на память</span>
+				<span class="button__text">Сохранить на память</span>
 			</button>
 			<dialog class="dialog" id="dialog-id">
 				<svg class="floppy-button__icon">
 					<use xlink:href="./images/floppy.svg#floppy"></use>
 				</svg>
-				<span class="floppy-button__text"
+				<span class="button__text"
 					>Вставьте дискету, чтобы продолжить</span
 				>
-				<button
-					onclick="window['dialog-id'].close()"
-					class="floppy-save__button"
-				>
-					OK
-				</button>
+				<form class="floppy-save__form" method="dialog">
+					<button class="button floppy-save__button">
+						<span class="button__text">ОК</span>
+					</button>
+				</form>
 			</dialog>
 		</main>
 		<script src="./scripts/like.js"></script>

@@ -2,9 +2,11 @@
 :root {
   --main-font: 'Inter-Variable';
   --font-accent: 'PressStart2P';
-  --bg-color: #ffffff;
+  --bg-color: #fff;
   --heart-contour: #000;
   --heart-hover: #000;
+  --border: 2px solid #000;
+  --animation-fill-color: #f00;
   --background-image:
     repeating-linear-gradient(
       to right,
