@@ -1,4 +1,8 @@
 .page {
+	display: grid;
+	gap: 100px;
+	align-items: center;
+	justify-content: center;
   font-family: var(--main-font), sans-serif;
 	background-image: var(--background-image);
 	background-position: center;
@@ -12,7 +16,6 @@
 	width: clamp(375px, 100vw, 700px);
 	background-color: var(--bg-color, #fff);
 	border: var(--border, 2px solid #000);
-	margin: 100px auto 0;
 }
 
 .button {
@@ -34,6 +37,7 @@
 }
 
 .header {
+	margin-top: 100px;
 	width: 100%;
 	max-width: 700px;
 	min-width: 375px;
@@ -47,11 +51,11 @@
 	text-transform: uppercase;
 }
 
-.header__title {
+.header__text {
 	font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
-.header__text {
+.header__title {
 	font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
@@ -61,6 +65,11 @@
 	padding: 5px 10px 4px;
 	border-bottom: var(--border, 2px solid #000);
 	line-height: 120%;
+}
+
+.cards {
+	display: grid;
+	gap: 50px;
 }
 
 .card__image-container {
@@ -100,7 +109,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-	gap: 6px;
+	gap: 12px;
 	padding-right: 25px;
 	padding-bottom: 25px;
 }
@@ -123,8 +132,8 @@
 
 .floppy-button {
 	position: relative;
-	gap: 8px;
-	margin: 50px auto;
+	gap: 10px;
+	margin: 50px auto 100px;
 	width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
 	padding: 15px 0;
 	transition: box-shadow 0.3s ease;
@@ -145,6 +154,11 @@
 	transform: translateX(0);
 }
 
+.button:focus-visible {
+	box-shadow: 2px 2px 0 0 #000;
+}
+
+
 .floppy-button__icon,
 .button__text {
 	color: #fff;
@@ -154,7 +168,6 @@
 	transition: color 0.3s;
 	font-family: var(--font-accent), sans-serif;
 	font-size: 14px;
-	line-height: 150%;
 }
 
 .floppy-button__icon {
@@ -189,14 +202,15 @@
 	grid-column: 1 / -1;
 }
 
+.dialog .button__text {
+	line-height: 150%;
+	text-transform: uppercase;
+}
+
 .floppy-save__button {
 	padding: 10px 0;
 	width: 100%;
 	transition: box-shadow 0.3s ease;
-}
-
-.button:focus-visible {
-	box-shadow: 2px 2px 0 0 #000;
 }
 
 .sparks {
@@ -280,4 +294,36 @@
 	animation-direction: alternate;
 	animation-timing-function: ease-in;
 	animation-duration: 0.3s;
+}
+
+.filter-opacity {
+	filter: opacity(100%);
+}
+
+.filter-grayscale {
+	filter: grayscale(1);
+}
+
+.high-contrast {
+	filter: contrast(200%);
+}
+
+.filter-blur {
+	filter: blur(10px);
+}
+
+.filter-drop-shadow-blur {
+	filter: drop-shadow(4px 4px 2px darkseagreen);
+}
+
+.filter-saturate {
+	filter: saturate(150%);
+}
+
+.filter-hue-rotate {
+	filter: hue-rotate(-105deg);
+}
+
+.filter-invert {
+	filter: invert(1);
 }
