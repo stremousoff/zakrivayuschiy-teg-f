@@ -1,5 +1,4 @@
 @supports (font-variation-settings: normal) {
-
 	body {
 		font-family: var(--main-font, 'Inter-Variable'), Arial, sans-serif;
 	}
@@ -10,6 +9,7 @@ body {
 }
 
 .page {
+	margin: 100px 0;
 	display: grid;
 	gap: 100px;
 	align-items: center;
@@ -47,7 +47,6 @@ body {
 }
 
 .header {
-	margin-top: 100px;
 	width: 100%;
 	max-width: 700px;
 	min-width: 375px;
@@ -67,6 +66,12 @@ body {
 
 .header__title {
 	font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+}
+
+.main {
+	display: grid;
+	justify-items: center;
+	gap: 50px;
 }
 
 .card__title {
@@ -143,9 +148,9 @@ body {
 .floppy-button {
 	position: relative;
 	gap: 10px;
-	margin: 50px auto 100px;
+	/*margin: 50px auto 100px;*/
 	width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
-	padding: 15px 0;
+	padding: 15px;
 	transition: box-shadow 0.3s ease;
 }
 
@@ -336,4 +341,11 @@ body {
 
 .filter-invert {
 	filter: invert(1);
+}
+
+@media (width >= 1024px) {
+	.floppy-button__icon {
+		width: 21px;
+		height: 21px;
+	}
 }

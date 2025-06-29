@@ -1,9 +1,13 @@
 @font-face {
   font-weight: 400 785;
-  font-family: Inter-Variable;
+  font-family: 'Inter-Variable';
   font-style: normal;
-  src: url('../fonts/Inter-Variable.woff2') format('woff2');
+  src:
+    url('./Inter-Variable.woff2') format('woff2 supports variations'),
+    url('./Inter-Variable.woff2') format('woff2-variations');
   font-display: swap;
+  font-stretch: 75% 100%;
+  font-variation-settings: 'wght' 400;
 }
 
 @font-face {
